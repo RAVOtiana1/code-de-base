@@ -1,3 +1,4 @@
+
 <?php
 session_start(); // Démarre la session
 
@@ -12,8 +13,7 @@ require_once("./connection.php");
 
 ?>
 
-
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -27,13 +27,14 @@ require_once("./connection.php");
     <title>Headers · Bootstrap v5.3</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!--gfh-->
+
+
+
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -45,9 +46,11 @@ require_once("./connection.php");
 <meta name="theme-color" content="#712cf9">
 
 
+
+
+
     <style>
-    
-body {
+        body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -78,7 +81,6 @@ body::before {
     opacity: 1;
   }
 }
-  
 #popupWindow {
   position: fixed;
   bottom: 0;
@@ -112,7 +114,6 @@ body::before {
   transform: translateY(0);
 }
 
-
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -127,7 +128,6 @@ body::before {
         }
       }
 
-    
       .b-example-divider {
     width: 100vw;  /* Largeur totale de la fenêtre */
     margin-left: 0; /* Assurez-vous que ça commence bien depuis le bord gauche */
@@ -136,9 +136,7 @@ body::before {
     border: solid rgba(0, 0, 0, 0.15);
     border-width: 1px 0;
     box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-
+        }
       .b-example-vr {
         flex-shrink: 0;
         width: 1.5rem;
@@ -156,9 +154,7 @@ body::before {
         height: 2.75rem;
         overflow-y: hidden;
       }
-
-      
-  .horizontal-gap {
+      .horizontal-gap {
     column-gap: 10rem; /* ajuste ici la valeur selon ton besoin */
     
   }
@@ -174,7 +170,8 @@ body::before {
         -webkit-overflow-scrolling: touch;
       }
 
-     
+      
+
       .bd-mode-toggle {
         z-index: 1500;
       }
@@ -231,9 +228,96 @@ body::before {
   </symbol>
 </svg>
 
-
-
 <main>
+
+  
+<div class="container"> <!-- bienvenu!-->
+
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom position-relative">
+  <a href="/" class="d-flex align-items-center mx-auto mb-3 mb-md-0 justify-content-center position-absolute start-50 translate-middle-x link-body-emphasis text-decoration-none">
+    <span class="fs-4">Bienvenue <?php echo $_SESSION['user']; ?></span>
+  </a>
+ 
+  <div class="ms-auto">
+<!-- Formulaire de déconnexion -->
+<form action="./logout.php" method="POST">
+  <button type="submit" class="btn btn-warning">Déconnexion</button>
+</form>
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+<!-- Icône de recherche avec espace à gauche -->
+<i class="bi bi-search fs-4 ms-5"></i>
+                                    
+  </header>
+
+
+<div class="b-example-divider"></div>                              <!--employées!-->
+<div class="container">
+  <header class="d-flex margin-left align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+ 
+
+
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+      </a>
+    </div>
+    <a href="/" class="d-flex e-auto ps-3 mb-3 mb-md-0  position-absolute start-50 translate-middle-x link-body-emphasis text-decoration-none ">
+     <!-- style-->
+     <ul class="nav nav-pills nav-fill horizontal-gap p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+<li class="nav-item" role="presentation">
+  <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">
+    <i class="bi bi-calendar-date fs-4"></i>
+  </button>
+</li>
+<li class="nav-item" role="presentation">
+  <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">
+    <i class="bi bi-bell-fill fs-4"></i>
+  </button>
+</li>
+<li class="nav-item" role="presentation">
+  <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">
+    <i class="bi bi-person-fill-add fs-4"></i>
+  </button>
+</li>
+</ul>
+    <!--<span class="fs-4" >employées</span>-->
+    </a>
+
+    <div class="d-flex align-items-center">
+<form class="w-75 me-3 ms-auto" role="search">
+  <div class="input-group">
+    <span class="input-group-text" id="basic-addon1">
+      <i class="bi bi-search fs-4 ms-3"></i>
+    </span>
+    <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+  </div>
+</form>
+</div>
+  </header>
+
+
+<div class="b-example-divider"></div>                                     
+
+<header class="p-3 text-bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+      </a>
+
+    
+    </div>
+  </div>
+</header>
+
+<div class="b-example-divider"></div>
+</div>
+      
+    </header>
+  </div>
+
+  
   <div class="container"> <!-- bienvenu!-->
 
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom position-relative">
@@ -316,10 +400,7 @@ body::before {
 
   <div class="b-example-divider"></div>
   </div>
-
-
-                                          <!--etrangers-->
-<header class="d-flex margin-left align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+  <header class="d-flex margin-left align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
 <!-- Icône cliquable pour ouvrir front2.php -->
 <i class="bi bi-arrow-right-circle-fill" style="font-size: 30px; cursor: pointer;" id="openWindow"></i>
 
@@ -364,7 +445,6 @@ body::before {
 </header>
 </div>
 
-  
   </header>
 
   <div class="b-example-divider"></div>
@@ -390,11 +470,18 @@ body::before {
           <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
         </form>
 
-        <div class="dropdown text-end">
-  <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-   
-</div>
-
+        <div class="flex-shrink-0 dropdown">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -475,6 +562,7 @@ body::before {
 
   <div class="b-example-divider"></div>
 </main>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- Contenu principal (inter2.php) -->
@@ -513,7 +601,6 @@ document.getElementById("closeWindow").addEventListener("click", () => {
   document.getElementById("popupWindow").classList.remove("active");
 });
 </script>
-
 
     </body>
 </html>
