@@ -63,7 +63,7 @@ body::before {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/fontdeMinistére'); /* remplace par ton chemin */
+  background-image: url('images/fontdeMinistére.jpeg'); /* remplace par ton chemin */
   background-size: cover;
   background-position: center;
   filter: blur(5px) brightness(0.9);
@@ -260,7 +260,7 @@ body::before {
   <div class="container">
     <header class="d-flex margin-left align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
    
-
+    <i class="bi bi-arrow-right-circle-fill" style="font-size: 30px; cursor: pointer;" id="openWindow"></i>
 
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
